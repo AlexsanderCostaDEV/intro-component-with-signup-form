@@ -160,6 +160,7 @@ body::before {
 /* mediaQuery */
 @media (min-width: 900px) {
     .container {
+        background: url('../images/bg-intro-desktop.png') no-repeat;
         display: flex;
         flex-direction: row;
         align-items: center;
