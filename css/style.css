@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    height: 100vh;
+    min-width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before {
+    content: '';
+    background-color: var(--red);
+    opacity: .9;
+    width: 100%;    
+    min-width: 325px;
+    height: 100%;
+    position: absolute;
+}
+.container {
+    z-index: 1;
+    width: 100%;
+    min-width: 325px;
+    height: 100%;
+    background: url('../images/bg-intro-mobile.png') no-repeat;
+    background-size: cover;
+    padding: 0 25px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .top-left .title {
+    color: white;
+    margin-top: 95px;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 35px;
+}
+.container .top-left .description {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 26px;
+}
+.container .bottom-right .try-free {
+    font-size: 16px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, .15);
+    color: white;
+    height: 90px;
+    max-width: 540px;
+    width: 100%;
+    margin-top: 62px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .bottom-right .try-free p {
+    padding: 0 50px;
+    text-align: center;
+}
+.container .bottom-right .form {
+    width: 100%;
+    max-width: 540px;
+    /* height: 450px; */
+    height: 70%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    margin-bottom: 70px;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, .15);
+}
+.container .bottom-right .form .div-input {
+    position: relative;
+}
+.container .bottom-right .form .div-input .img-error {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.container .bottom-right .form input {
+    margin-bottom: 17px;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    height: 57px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    width: 100%;
+}
+.container .bottom-right .form .div-input .error {
+    display: none;
+    position: relative;
+    top: -12px;
+    text-align: right;
+    color: var(--red);
+    font-style: italic;
+    font-size: 10px;
+}
+.container .bottom-right .form input:focus {
+    border: 1px solid var(--dark-blue);
+}
+.container .bottom-right .form button {
+    height: 57px;
+    width: 100%;
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 0px hsla(154, 90%, 27%, 0.5);
+    cursor: pointer;
+    outline: none;
+}
+.container .bottom-right .form button:hover {
+    background-color: hsla(154, 59%, 51%, 0.6);
+}
+.container .bottom-right .form a {
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--grayish-blue);
+    text-align: center;
+    margin-top: 15px;
+    padding: 0 14px;
+    font-weight: 50;
+    cursor: default;
+}
+.container .bottom-right .form a span {
+    color: var(--red);
+    font-weight: 600;
+    cursor: pointer;
+}
+/* mediaQuery */
+@media (min-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .top-left {
+        width: 50%;
+    }
+    .container .bottom-right {
+        width: 50%;
+    }
+    .container .top-left .title {
+        margin-top: 0px;
+        font-size: 50px;
+        text-align: start;
+        line-height: 50px;
+        padding-left: 135px;
+    }
+    .container .top-left .description {
+        padding-left: 135px;
+        text-align: start;
+        margin-top: 46px;
+    }
+    .container .bottom-right .form {
+        /* height: 475px; */
+        height: 70%;
+        padding: 40px;
+    }
+    .container .bottom-right .try-free {
+        height: 60px;
+        margin-top: 71px;
+        margin-bottom: 24px;
+    }
+    .container .bottom-right .form input {
+        margin-bottom: 19px;
+        padding: 10px 20px;
+        height: 57px;
+    }
+    .container .bottom-right .form button {
+        height: 53px;
+        font-weight: 500;
+    }
+}
